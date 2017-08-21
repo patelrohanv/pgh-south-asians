@@ -1,3 +1,4 @@
+# /usr/bin/env python3
 import sqlite3 as lite
 import csv
 import argparse
@@ -42,7 +43,7 @@ with con:
 	queries['clean'] = '''
 		DELETE
 		FROM AsianAmericans
-		WHERE zip <= 15001 AND zip >= 16199
+		WHERE zip < 15001 OR zip > 16199
 	'''
 
 	#Verion of trim for non-sqlite
